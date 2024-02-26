@@ -8,7 +8,8 @@ function initNav() {
         menuButton.textContent = 'Menu';
         let aboutButton = document.createElement('button');
         aboutButton.textContent = 'About';
-        document.body.appendChild(pageHeader);
+        let content = document.querySelector('.content');
+        content.appendChild(pageHeader);
         pageHeader.appendChild(pageNav);
         pageNav.appendChild(homeButton);
         pageNav.appendChild(menuButton);
