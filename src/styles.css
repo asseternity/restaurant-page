@@ -5,79 +5,175 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     font-family: Georgia;
     color: white;
 }
 
-.content {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-}
-
-@keyframes zoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-}
-
-.logo {
-    height: 200px;
-    width: 200px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.7;
-    margin-bottom: -200px;
-}
+/* --- NAV --- */
 
 header {
-    width: 100%;
-    z-index: 1000;
+    width: 100vw;
+    height: 122px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    z-index: 10;
+}
+
+nav {
+    width: 100vw;
+    z-index: 15;
     display: flex;
     flex-direction: row;
     justify-content: end;
     border-bottom: 2px solid white;
 }
 
-nav {
-    z-index: 1000;
+.blackNav {
+    background-color: black;
 }
 
 button {
+    margin: 0;
     background-color: transparent;
-    border: none;
+    border: 2px solid transparent;
     color: white;
     font-size: 200%;
     padding: 40px;
     font-family: Georgia;
+    z-index: 2;
 }
 
-.contactButton {
-    margin-bottom: 100px;
-    padding: 20px;
-    border: 2px solid white;
+button:hover {
+    color:#C6A0C6;
+    border: 2px solid #C6A0C6;
 }
 
-.backgroundImageDiv {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -10;
+button.activated {
+    background-color: #C6A0C6;
+    color: white;
+}
+
+/* --- HOME --- */
+
+.homeContent {
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+
+.homeBG {
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
     animation: zoom 10s infinite alternate;
 }
 
-.backgroundImageDiv::before {
-    content: "";
-    position: absolute;
-    width: 100%;
+img {
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+    z-index: 3;
+}
+
+.homeContent button {
+    border: 2px solid white;
+}
+
+.homeContent button:hover {
+    border: 2px solid #C6A0C6;
+}
+
+/* --- HOME ANIMATION --- */
+
+
+@keyframes zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* --- ABOUT --- */
+
+.aboutContent {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: -5;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutContent p {
+    font-size: 130%;
+    width: 60%;
+}
+
+/* --- MENU --- */
+
+.menuContent {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    transition: transform 2s;
+}
+
+.menuLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.menuSection {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 350px 350px;
+    row-gap: 30px;
+}
+
+.menuItem {
+    border-bottom: 2px solid #C6A0C6;
+}
+
+.menuItem h2 {
+    color: #C6A0C6;
+}
+
+/* --- ANIMATIONS --- */
+
+.show {
+    transform: translateY(0);
 }
