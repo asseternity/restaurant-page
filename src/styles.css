@@ -182,3 +182,36 @@ img {
 .topToCenter {
     transform: translateY(0);
 }
+
+/* --- RESPONSIVE --- */
+
+@media screen and (max-width:720px) {
+    nav button {
+        font-size: 120%;
+        padding: 20px;
+    }
+    header {
+        height: 100px;
+    }
+    .homeContent button {
+        padding: 10px;
+    }
+    .menuSection {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        padding: 20px;
+    }
+    .aboutContent {
+        font-size: 75%;
+    }
+    .aboutContent p {
+        margin-bottom: 0;
+    }
+    .aboutContent img {
+        height: 100px;
+        width: 100px;
+    }
+    
+}
