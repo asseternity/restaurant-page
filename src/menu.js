@@ -73,20 +73,20 @@ function menuPage() {
     div5.classList.add('menuItem');
     menuSection.appendChild(div5);
     let h5 = document.createElement('h2');
-    h5.textContent = 'The Whisperer in Darkness Riesling'
+    h5.textContent = 'The Thing on the Doorstep Syrah'
     div5.appendChild(h5);
     let p5 = document.createElement('p');
-    p5.textContent = 'A light and aromatic wine with notes of peach, apricot, and a hint of honey, perfect for sipping on a warm summer evening.'
+    p5.textContent = 'A rich and spicy wine with flavors of blackberry, black pepper, and a hint of leather, named after the haunting tale of possession and identity.'
     div5.appendChild(p5);
 
     let div6 = document.createElement('div');
     div6.classList.add('menuItem');
     menuSection.appendChild(div6);
     let h6 = document.createElement('h2');
-    h6.textContent = 'The Whisperer in Darkness Riesling'
+    h6.textContent = 'The Rats in the Walls Grenache'
     div6.appendChild(h6);
     let p6 = document.createElement('p');
-    p6.textContent = 'A light and aromatic wine with notes of peach, apricot, and a hint of honey, perfect for sipping on a warm summer evening.'
+    p6.textContent = 'A lively and fruit-forward wine with flavors of strawberry, raspberry, and a hint of cinnamon, named after the terrifying creatures that dwell within the walls of Exham Priory.'
     div6.appendChild(p6);
 
     let div7 = document.createElement('div');
@@ -118,6 +118,20 @@ function menuPage() {
     let p9 = document.createElement('p');
     p9.textContent = 'A smooth and elegant wine with flavors of raspberry, red currant, and a hint of violet, named after the chilling festival in Kingsport.'
     div9.appendChild(p9);
+
+    let div10 = document.createElement('div');
+    div10.classList.add('menuItem');
+    menuSection.appendChild(div10);
+    let h10 = document.createElement('h2');
+    h10.textContent = 'The Lurking Fear Viognier'
+    div10.appendChild(h10);
+    let p10 = document.createElement('p');
+    p10.textContent = 'A floral and aromatic white wine with flavors of peach, apricot, and a hint of honeysuckle, inspired by the lurking terrors of the night.'
+    div10.appendChild(p10);
+
+    setTimeout(() => {
+        menuContent.classList.add('topToCenter');
+    }, 100);
 
 }
 

@@ -29,6 +29,11 @@ function aboutPage() {
     // scrolling
     document.body.style.overflow = 'hidden';
     document.documentElement.scrollTop = 0;
+    // animation
+    setTimeout(() => {
+        aboutContent.classList.add('topToCenter');
+    }, 100);
+
 }
 
 export { aboutPage };
