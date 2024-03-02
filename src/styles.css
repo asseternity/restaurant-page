@@ -9,6 +9,7 @@ html, body {
     width: 100vw;
     font-family: Georgia;
     color: white;
+    background-color: black;
 }
 
 /* --- NAV --- */
@@ -73,6 +74,8 @@ button.activated {
     justify-content: space-evenly;
     align-items: center;
     z-index: 1;
+    transform: translateY(-100%);
+    transition: transform 2s;
 }
 
 .homeBG {
@@ -106,7 +109,6 @@ img {
 
 /* --- HOME ANIMATION --- */
 
-
 @keyframes zoom {
     0% { transform: scale(1); }
     100% { transform: scale(1.1); }
@@ -129,6 +131,8 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translateY(-100%);
+    transition: transform 2s;
 }
 
 .aboutContent p {
@@ -147,6 +151,7 @@ img {
     background-color: black;
     display: flex;
     flex-direction: column;
+    transform: translateY(-100%);
     transition: transform 2s;
 }
 
@@ -174,6 +179,6 @@ img {
 
 /* --- ANIMATIONS --- */
 
-.show {
+.topToCenter {
     transform: translateY(0);
 }

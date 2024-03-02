@@ -32,6 +32,10 @@ function homePage() {
     // scrolling
     document.body.style.overflow = 'hidden';
     document.documentElement.scrollTop = 0;
+    // animation
+    setTimeout(() => {
+        homeContent.classList.add('topToCenter');
+    }, 100);
 }
 
 export { homePage };
